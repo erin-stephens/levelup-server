@@ -4,7 +4,7 @@ from .gamer import Gamer
 
 class Event(models.Model):
 
-    game = models.ForeignKey(Game, on_delete=models.CASCADE)
+    game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name='events')
     description = models.CharField(max_length=200)
     date = models.DateField()
     time = models.TimeField()
